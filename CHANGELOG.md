@@ -1,3 +1,7 @@
+# 1.12.0
+
+- Atualização no processamento dos `parp.dat`, `parpeol.dat`, `parpvaz.dat` e `penalid.dat` para compatibilização com pandas `>=3.0.0`.
+
 # 1.11.2
 
 - Correção no arquivo `dger.dat` em relação aos campos adicionados recentemente ao final do arquivo
