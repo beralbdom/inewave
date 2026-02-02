@@ -126,12 +126,12 @@ class BlocoPenalidades(Section):
             .iterrows()
         ):
             df_penalid = df.loc[df["variavel"] == linha_penalidade["variavel"]]
-            if linha_penalidade["codigo_ree_submercado"] is not None:
+            if pd.notna(linha_penalidade["codigo_ree_submercado"]):
                 df_penalid = df_penalid.loc[
                     df_penalid["codigo_ree_submercado"]
                     == linha_penalidade["codigo_ree_submercado"]
                 ]
-            if linha_penalidade["patamar_carga"] is not None:
+            if pd.notna(linha_penalidade["patamar_carga"]):
                 df_penalid = df_penalid.loc[
                     df_penalid["patamar_carga"]
                     == linha_penalidade["patamar_carga"]

@@ -184,5 +184,5 @@ def test_neq_parpvaz():
     with patch("builtins.open", m):
         parp1 = Parpvaz.read(ARQ_TESTE)
         parp2 = Parpvaz.read(ARQ_TESTE)
-        parp2.series_vazoes_uhe.iloc[0, 0] = -1
+        parp2.series_vazoes_uhe.iloc[0, 0] = "teste"
         assert parp1 != parp2

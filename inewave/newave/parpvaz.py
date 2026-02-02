@@ -210,12 +210,14 @@ class Parpvaz(BlockFile):
         ano0 = df["ano"].unique().tolist()[0]
         filtro = (df["ano"] == ano0) & (df["uhe"] == uhe0)
         n_series = df.loc[filtro].shape[0]
+        novo_vetor_anos: List[int] = []
         for i, uhe in enumerate(uhes):
             i_i = i * int(linhas_por_uhe)
             i_f = i_i + int(linhas_por_uhe) - 1
-            df.loc[i_i:i_f, "ano"] = converte_vetor_anos(
+            novo_vetor_anos += converte_vetor_anos(
                 df.loc[i_i:i_f, "ano"].tolist(), n_series
             )
+        df["ano"] = novo_vetor_anos
         return df[["uhe"] + cols]
 
     def __converte_ano_mes_data(

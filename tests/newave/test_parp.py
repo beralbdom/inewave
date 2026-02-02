@@ -234,5 +234,5 @@ def test_neq_parp():
     with patch("builtins.open", m):
         parp1 = Parp.read(ARQ_TESTE)
         parp2 = Parp.read(ARQ_TESTE)
-        parp2.series_energia_ree.iloc[0, 0] = -1
+        parp2.series_energia_ree.iloc[0, 0] = "teste"
         assert parp1 != parp2
