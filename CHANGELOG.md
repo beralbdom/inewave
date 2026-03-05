@@ -1,3 +1,8 @@
+# 1.12.1
+
+- Correção na leitura do arquivo `hidr.dat` com campos vazios (@beralbdom)
+- Restrição da dependência `cfinterface` para versões `<=1.8.3`
+
 # 1.12.0
 
 - Atualização no processamento dos `parp.dat`, `parpeol.dat`, `parpvaz.dat` e `penalid.dat` para compatibilização com pandas `>=3.0.0`.
