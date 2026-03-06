@@ -70,6 +70,10 @@ class ModifRegister(Register):
 class USINA(ModifRegister):
     """
     Registro que contém a usina modificada.
+
+    NOTA: ModifRegister usa leitura baseada em delimitador, portanto o campo
+    opcional 'nome' (col. 44) será truncado se contiver espaços. Na prática,
+    este campo não é utilizado em arquivos MODIF.DAT.
     """
 
     __slots__: List[str] = []
