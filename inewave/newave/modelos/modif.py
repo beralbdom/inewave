@@ -21,7 +21,6 @@ class ModifRegister(Register):
     - Capacidade de escrever uma linha assumindo uma formatação
         constante para melhor visualização.
 
-    OBS: Atualmente só utilizados para registros VOLMIN e VOLMAX.
     """
 
     __slots__ = ["__identifier_field", "__previous", "__next", "__data"]
@@ -68,7 +67,7 @@ class ModifRegister(Register):
         return True
 
 
-class USINA(Register):
+class USINA(ModifRegister):
     """
     Registro que contém a usina modificada.
     """
